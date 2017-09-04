@@ -22,13 +22,16 @@ gulp.task('styles', function(){
 });
 
 /* -------------------------
-Watch Task - Starts a watcher for changes on listed files 
+Watch Task - Starts a watcher for changes on listed files
 -------------------------- */
 gulp.task('watch', function(){
+
+  //HTML
   watch('./app/index.html', function(){
     gulp.start('html');
   });
 
+  //CSS
   watch('./app/assets/styles/**/*.css', function(){
     gulp.start('styles');
   });
